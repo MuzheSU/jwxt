@@ -14,10 +14,8 @@ import org.apache.http.message.BasicNameValuePair;
 
 import java.io.IOException;
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 /**
  * 登录
@@ -25,9 +23,12 @@ import java.util.Map;
 public class LoginPz {
     public static String hello() {
         Map<String,String> param = new HashMap<>();
-        String userAccount = "19408000228";
-        String userPassword = "MTk0MDgwMDAzMjI=%%%cGoyMDAyMDMxOA==";//不用填随便填都可以
-        String encoded = "MTk0MDgwMDAyMjg=%%%aGR5MTEyNy4=";//加密信息
+        String userAccount = "19408000322";//账号
+        String userPassword = "pj20020318";//密码
+        byte[] userbyte = userAccount.getBytes();
+        byte[] passbyte = userPassword.getBytes();
+        String encoded = Base64.getEncoder().encodeToString(userbyte)+"%%%"+Base64.getEncoder().encodeToString(passbyte);//加密信息
+        System.out.println(encoded);
         param.put("userAccount",userAccount);
         param.put("userPassword",userPassword);
         param.put("encoded",encoded);

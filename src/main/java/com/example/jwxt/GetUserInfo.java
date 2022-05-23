@@ -114,6 +114,8 @@ public class GetUserInfo {
             System.out.println();
             stringBuilder.append("\r\n");
         }
+        stringBuilder.append("\r\n");
+        stringBuilder.append("遇到问题可以反馈给 qq:1493020035 十分感谢~ 也欢迎你对此项目改进 https://github.com/fengxiaop/HUT-JWXT ");
         System.out.println("");
         System.out.println();
 //        System.out.println(tables.size());
@@ -121,7 +123,7 @@ public class GetUserInfo {
         {
             //发送邮件给自己
             System.out.println("这是一个标志");
-            SendMailUtil.sendEmail("1493020035@qq.com", "成绩更新", stringBuilder.toString());
+            SendMailUtil.sendEmail("1493020035@qq.com", "有成绩更新啦", stringBuilder.toString());
             idx = tables.size();
         }
     }

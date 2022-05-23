@@ -87,7 +87,7 @@
 
             //设置发件人邮箱
             // InternetAddress 的三个参数分别为: 发件人邮箱, 显示的昵称(只用于显示, 没有特别的要求), 昵称的字符集编码
-            msg.setFrom(new InternetAddress(myEmailAccount,"我的工作站", "UTF-8"));
+            msg.setFrom(new InternetAddress(myEmailAccount,"你的成绩提醒小助手", "UTF-8"));
 
             //得到邮差对象
             Transport transport = session.getTransport();
