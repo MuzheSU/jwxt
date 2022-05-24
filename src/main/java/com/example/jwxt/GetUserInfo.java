@@ -22,11 +22,12 @@ import java.util.stream.Collectors;
  * 此处仅作为演示。
  */
 public class GetUserInfo {
-    static int idx = 2;
+    static int idx = 0;
     public static void cj() throws Exception {
-        for (int i = 0; i < 1000000000; ) {
+        for (int i = 0; i < 1;i++ ) {
             LoginPz loginPz = new LoginPz();
             String cookies = loginPz.hello();
+            System.out.println(cookies);
             CloseableHttpClient httpClient = HttpClients.createDefault();
             try {
                 HttpGet httpGet = new HttpGet("http://218.75.197.123:83/jsxsd/kscj/cjcx_list?kksj=2021-2022-1");
@@ -44,7 +45,9 @@ public class GetUserInfo {
                 //解析html
 
                 Document parse = Jsoup.parse(html);
+                System.out.println(1);
                 parseHtml(parse);
+                System.out.println(2);
                 System.out.println("线程创建开始");
                 Thread thread = new Thread();
                 thread.sleep(600000);
@@ -58,6 +61,7 @@ public class GetUserInfo {
     private static void parseHtml(Document parse) throws Exception {
 //        int idx = 2;//目前已出成绩科目
         //选择table
+        System.out.println("1243");
         Element table = parse.getElementById("dataList");
         //选择tr
         Elements cells = table.select("tr");
@@ -94,10 +98,15 @@ public class GetUserInfo {
         //打印数据
         for(int i = 0;i < tableHeader.size();i++)
         {
+            System.out.println("测试点1"+tableHeader.size()+" "+i);
             if(i == 3 || i == 5)//i == 3时代表着课程名 5代表成绩
             {
+                System.out.println("测试点2"+" "+i);
+                System.out.println(tableHeader.get(i));
+//                System.out.format("%16d",tableHeader.get(i));
                 System.out.printf(tableHeader.get(i)+" ");
                 stringBuilder.append(tableHeader.get(i)+" ");
+                if(i == 5) break;//提前结束  减小性能
             }
         }
         stringBuilder.append("\r\n");
@@ -109,6 +118,7 @@ public class GetUserInfo {
                     {
                         System.out.print(strs.get(i)+" ");
                         stringBuilder.append(strs.get(i)+" ");
+                        if(i == 5) break;//提前结束  减小性能
                     }
                 }
             System.out.println();
@@ -116,10 +126,11 @@ public class GetUserInfo {
         }
         stringBuilder.append("\r\n");
         stringBuilder.append("遇到问题可以反馈给 qq:1493020035 十分感谢~ 也欢迎你对此项目改进 https://github.com/fengxiaop/HUT-JWXT ");
-        System.out.println("");
+        stringBuilder.append("<h4><center> >>>>  <a href=\"https://github.com/fengxiaop/HUT-JWXT\">Github地址</a>\n" +
+                "<<<<</center></h4>");
         System.out.println();
 //        System.out.println(tables.size());
-        if (tables.size() > 1)//idx 为原先的成绩数量123
+        if (tables.size() > idx)//idx 为原先的成绩数量123
         {
             //发送邮件给自己
             System.out.println("这是一个标志");
