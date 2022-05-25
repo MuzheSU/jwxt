@@ -100,7 +100,13 @@ public class GetUserInfo {
 //                System.out.format("%16d",tableHeader.get(i));
                 System.out.printf(tableHeader.get(i)+" ");
                 stringBuilder.append(tableHeader.get(i)+" ");
-                if(i == 5) break;//提前结束  减小性能
+                if(i == 5) {
+                    System.out.println();
+                    System.out.print("--------------");
+                    stringBuilder.append("\r\n");
+                    stringBuilder.append("----------------");
+                    break;
+                }//提前结束  减小性能
             }
         }
         stringBuilder.append("\r\n");
