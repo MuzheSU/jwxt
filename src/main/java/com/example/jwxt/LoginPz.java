@@ -27,9 +27,9 @@ public class LoginPz {
         String userPassword = "pj20020318";//密码
         byte[] userbyte = userAccount.getBytes();//userAccout的byte数组
         byte[] passbyte = userPassword.getBytes();//password的byte数组
-//        String encoded = Base64.getEncoder().encodeToString(userbyte)+"%%%"+Base64.getEncoder().encodeToString(passbyte);//教务系统的加密方法
-        String encoded = "MTk0MDgwMDAzMjI=%%%cGoyMDAyMDMxOA==";
-        System.out.println(encoded);
+        String encoded = Base64.getEncoder().encodeToString(userbyte)+"%%%"+Base64.getEncoder().encodeToString(passbyte);//教务系统的加密方法
+//        String encoded = "MTk0MDgwMDAzMjI=%%%cGoyMDAyMDMxOA==";
+//        System.out.println(encoded);  打印encoded  人工检验算法是否正确
         param.put("userAccount",userAccount);
         param.put("userPassword",userPassword);
         param.put("encoded",encoded);
