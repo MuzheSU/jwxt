@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 public class GetUserInfo {
     static int idx = 0;
     public static void cj() throws Exception {
-        for (int i = 0; i < 1;i++ ) {
+        for (int i = 0; i < 1000000000;i++ ) {
             LoginPz loginPz = new LoginPz();
             String cookies = loginPz.hello();
 //            System.out.println(cookies); 打印cookie  是否生效
@@ -48,7 +48,7 @@ public class GetUserInfo {
                 parseHtml(parse);//调用解析网页函数
                 System.out.println("线程创建开始");
                 Thread thread = new Thread();
-                thread.sleep(600000);//间隔sleep10分钟
+                thread.sleep(1200000);//间隔sleep10分钟
                 System.out.println("线程创造结束");
             } catch (Exception e) {
             }
