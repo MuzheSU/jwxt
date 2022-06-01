@@ -130,7 +130,7 @@ public class GetUserInfo {
                 "<<<<</center></h4>");
         System.out.println();
 //        System.out.println(tables.size());
-        if (tables.size() > idx)//idx 为原先的成绩数量123
+        if (tables.size() > idx && tables.size() > 0)//idx 为原先的成绩数量123
         {
             //发送邮件给自己
             System.out.println("这是一个标志");
