@@ -23,8 +23,8 @@ import java.util.*;
 public class LoginPz {
     public static String hello() {
         Map<String,String> param = new HashMap<>();
-        String userAccount = "19408000322";//账号
-        String userPassword = "pj20020318";//密码
+        String userAccount = "";//在“”中填写学号
+        String userPassword = "";//在“”中填写密码
         byte[] userbyte = userAccount.getBytes();//userAccout的byte数组
         byte[] passbyte = userPassword.getBytes();//password的byte数组
         String encoded = Base64.getEncoder().encodeToString(userbyte)+"%%%"+Base64.getEncoder().encodeToString(passbyte);//教务系统的加密方法
@@ -40,7 +40,7 @@ public class LoginPz {
         String resultString = "";
         try {
             // 创建Http Post请求
-            HttpPost httpPost = new HttpPost("http://218.75.197.123:83/jsxsd/xk/LoginToXk");
+            HttpPost httpPost = new HttpPost("http://218.75.197.123:83/jsxsd/xk/LoginToXk");//学校的教务系统网址
             //请求头
             httpPost.addHeader("Content-Type","application/x-www-form-urlencoded");
             httpPost.addHeader("Cookie","JSESSIONID=22B4C4CE6240C6C53FF6BC3C197E3B83; SERVERID=121; JSESSIONID=8FFFAEA49DC840CE5A3135330C06CED3");

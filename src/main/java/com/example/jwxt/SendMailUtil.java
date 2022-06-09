@@ -21,11 +21,11 @@
         private static String myEmailSMTPHost = "smtp.qq.com";
 
         //发件人邮箱
-        private static String myEmailAccount = "1493020035@qq.com";
+        private static String myEmailAccount = "xx@qq.com";//发件邮箱 可和以前的收件邮箱一样  即自己给自己发
 
         //发件人邮箱密码（授权码）
         //在开启SMTP服务时会获取到一个授权码，把授权码填在这里
-        private static String myEmailPassword = "dwocfwkvjusujeig";
+        private static String myEmailPassword = ""; //授权码  建议使用qq邮箱  百度有教程  这里不详细讲
 
         /**
          * 邮件单发（自由编辑短信，并发送，适用于私信）

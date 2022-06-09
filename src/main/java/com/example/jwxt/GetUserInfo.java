@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 public class GetUserInfo {
     static int idx = 0;
     public static void cj() throws Exception {
-        for (int i = 0; i < 1000000000;i++ ) {
+        for (int i = 0; i < 1000; ) {//死循环 记得成绩全部出完下架
             LoginPz loginPz = new LoginPz();
             String cookies = loginPz.hello();
 //            System.out.println(cookies); 打印cookie  是否生效
@@ -134,7 +134,7 @@ public class GetUserInfo {
         {
             //发送邮件给自己
             System.out.println("这是一个标志");
-            SendMailUtil.sendEmail("1493020035@qq.com", "有成绩更新啦", stringBuilder.toString());
+            SendMailUtil.sendEmail("xx@qq.com", "有成绩更新啦", stringBuilder.toString());
             idx = tables.size();
         }
     }
