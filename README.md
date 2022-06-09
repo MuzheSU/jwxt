@@ -21,7 +21,7 @@ IDEA打开项目
 
 ![](http://windxiao-1307340949.cosgz.myqcloud.com/20220609194343.png)
 
-![image-20220609194445851](C:\Users\peng\AppData\Roaming\Typora\typora-user-images\image-20220609194445851.png)
+![](http://windxiao-1307340949.cosgz.myqcloud.com/20220609200822.png)
 
 大概等了几分钟 等依赖加载完  加载慢的建议直接上梯子
 
@@ -39,7 +39,7 @@ IDEA打开项目
 
 收件邮箱 加邮件主题(emailTitle  可改可不改) 
 
-![image-20220609195712707](C:\Users\peng\AppData\Roaming\Typora\typora-user-images\image-20220609195712707.png)
+![](http://windxiao-1307340949.cosgz.myqcloud.com/image-20220609195712707.png)
 
 `jwxt\src\main\java\com\example\jwxt\SendMailUtil` 下更改发件邮箱和授权码 
 
