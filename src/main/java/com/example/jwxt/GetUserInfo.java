@@ -30,7 +30,7 @@ public class GetUserInfo {
 //            System.out.println(cookies); 打印cookie  是否生效
             CloseableHttpClient httpClient = HttpClients.createDefault();
             try {
-                HttpGet httpGet = new HttpGet("http://218.75.197.123:83/jsxsd/kscj/cjcx_list?kksj=2021-2022-1");
+                HttpGet httpGet = new HttpGet("http://218.75.197.123:83/jsxsd/kscj/cjcx_list?kksj=2021-2022-2");
                 //增加头信息
                 //注意此处需要修改为正确的JSESSIONID 和 SERVERID
                 httpGet.addHeader("Cookie", "JSESSIONID" + "=" + cookies + "; SERVERID=121; JSESSIONID=8FFFAEA49DC840CE5A3135330C06CED3");
