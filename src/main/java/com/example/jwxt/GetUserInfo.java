@@ -9,8 +9,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Timer;
 import java.util.stream.Collectors;
@@ -21,16 +24,21 @@ import java.util.stream.Collectors;
  * 需要结合自己的需求来操作
  * 此处仅作为演示。
  */
+@Component
 public class GetUserInfo {
     static int idx = 0;
-    public static void cj() throws Exception {
-        for (int i = 0; i < 1000; ) {//死循环 记得成绩全部出完下架
+//    @Scheduled(cron = "*/30 * * * *")
+    @Scheduled(cron = "0 0/10 * * * ? ")
+        public void cj() throws Exception {
+        Date date = new Date();
+        System.out.println(date);
+//        for (int i = 0; i < 1000; ) {//死循环 记得成绩全部出完下架
             LoginPz loginPz = new LoginPz();
             String cookies = loginPz.hello();
 //            System.out.println(cookies); 打印cookie  是否生效
             CloseableHttpClient httpClient = HttpClients.createDefault();
             try {
-                HttpGet httpGet = new HttpGet("http://218.75.197.123:83/jsxsd/kscj/cjcx_list?kksj=2021-2022-2");
+                HttpGet httpGet = new HttpGet("http://218.75.197.123:83/jsxsd/kscj/cjcx_list?kksj=2021-2022-1");
                 //增加头信息
                 //注意此处需要修改为正确的JSESSIONID 和 SERVERID
                 httpGet.addHeader("Cookie", "JSESSIONID" + "=" + cookies + "; SERVERID=121; JSESSIONID=8FFFAEA49DC840CE5A3135330C06CED3");
@@ -46,15 +54,14 @@ public class GetUserInfo {
 
                 Document parse = Jsoup.parse(html);
                 parseHtml(parse);//调用解析网页函数
-                System.out.println("线程创建开始");
-                Thread thread = new Thread();
-                thread.sleep(1200000);//间隔sleep10分钟
-                System.out.println("线程创造结束");
+//                System.out.println("线程创建开始");
+//                Thread thread = new Thread();
+//                thread.sleep(1200000);//间隔sleep10分钟
+//                System.out.println("线程创造结束");
             } catch (Exception e) {
             }
 
         }
-    }
 
     private static void parseHtml(Document parse) throws Exception {
 //        int idx = 2;//目前已出成绩科目
@@ -126,15 +133,15 @@ public class GetUserInfo {
         }
         stringBuilder.append("\r\n");
         stringBuilder.append("遇到问题可以反馈给 qq:1493020035 十分感谢~ 也欢迎你对此项目改进");
-        stringBuilder.append("<h4><center> >>>>  <a href=\"https://github.com/fengxiaop/HUT-JWXT\">Github地址</a>\n" +
-                "<<<<</center></h4>");
+        stringBuilder.append("<h4><center> <a href=\"https://github.com/fengxiaop/HUT-JWXT\">Github地址</a>\n" +
+                "</center></h4>");
         System.out.println();
 //        System.out.println(tables.size());
         if (tables.size() > idx && tables.size() > 0)//idx 为原先的成绩数量123
         {
             //发送邮件给自己
             System.out.println("这是一个标志");
-            SendMailUtil.sendEmail("xx@qq.com", "有成绩更新啦", stringBuilder.toString());
+            SendMailUtil.sendEmail("1493020035@qq.com", "有成绩更新啦", stringBuilder.toString());
             idx = tables.size();
         }
     }

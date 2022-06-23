@@ -8,6 +8,8 @@ class JwxtApplicationTests {
 
     @Test
     void contextLoads() {
+//        SendMail sendMail = new SendMail();
+//        sendMail.sendSimpleMail("1493020035@qq.com","1493020035@qq.com","123","test");
     }
 
 }

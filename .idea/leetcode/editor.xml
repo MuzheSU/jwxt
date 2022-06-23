@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LeetcodeEditor">
+    <option name="projectConfig">
+      <map>
+        <entry key="$PROJECT_DIR$/../../Leetcode/Temp/leetcode/editor/cn/[1103]分糖果 II.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../../Leetcode/Temp/leetcode/editor/cn/doc/content/[1103]分糖果 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1103" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/../../Leetcode/Temp/leetcode/editor/cn/[1103]分糖果 II.java" />
+              <option name="titleSlug" value="distribute-candies-to-people" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Leetcode/Temp/leetcode/editor/cn/[1144]递减元素使数组呈锯齿状.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../../Leetcode/Temp/leetcode/editor/cn/doc/content/[1144]递减元素使数组呈锯齿状.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1144" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/../../Leetcode/Temp/leetcode/editor/cn/[1144]递减元素使数组呈锯齿状.java" />
+              <option name="titleSlug" value="decrease-elements-to-make-array-zigzag" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../Leetcode/Temp/leetcode/editor/cn/[面试题 17.11]单词距离.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../../Leetcode/Temp/leetcode/editor/cn/doc/content/[面试题 17.11]单词距离.md" />
+              <option name="frontendQuestionId" value="leetcode.cn面试题 17.11" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/../../Leetcode/Temp/leetcode/editor/cn/[面试题 17.11]单词距离.java" />
+              <option name="titleSlug" value="find-closest-lcci" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
