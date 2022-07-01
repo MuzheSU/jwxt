@@ -1,6 +1,20 @@
 # 湖南工业大学成绩更新邮件提醒
 [![](https://img.shields.io/badge/author-wind-blue "作者")](https://github.com/fengxiaop/) [![](https://img.shields.io/badge/%E6%95%99%E5%8A%A1%E7%B3%BB%E7%BB%9F-%E6%88%90%E7%BB%A9%E6%9B%B4%E6%96%B0v1.0-red)](https://github.com/fengxiaop/HUT-JWXT)[![](https://img.shields.io/badge/qq-1493020035-brightgreen"作者qq") ]() 
 
+理论上适用于强制科技教务系统所有学校的成绩更新 仅供参考
+
+V2.0版本更新
+
+使用@Scheduled 注解 ```@Scheduled(cron = "0 0/10 * * * ? ")``` 利用cron表达式
+
+
+
+
+
+
+
+
+
 是不是每个学期末考完都说老师捞我下学期好好做人，是不是等待成绩的日子很焦虑,这个可以解决你的焦虑！在老师登陆成绩的十分钟内你会收到邮件的提醒！ 永远解决你的焦虑
 
 理论上实用于所有强智科技系统没有验证码的学校  可以作为参加  有需要的话 我会单独写一篇博客来讲流程

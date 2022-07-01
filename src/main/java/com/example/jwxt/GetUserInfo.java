@@ -9,6 +9,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -26,13 +27,13 @@ import java.util.stream.Collectors;
  */
 @Component
 public class GetUserInfo {
+    @Autowired
+    private SendEmail email;
     static int idx = 0;
-//    @Scheduled(cron = "*/30 * * * *")
     @Scheduled(cron = "0 0/10 * * * ? ")
         public void cj() throws Exception {
         Date date = new Date();
         System.out.println(date);
-//        for (int i = 0; i < 1000; ) {//死循环 记得成绩全部出完下架
             LoginPz loginPz = new LoginPz();
             String cookies = loginPz.hello();
 //            System.out.println(cookies); 打印cookie  是否生效
@@ -49,21 +50,15 @@ public class GetUserInfo {
                 //执行
                 CloseableHttpResponse response = httpClient.execute(httpGet);
                 String html = EntityUtils.toString(response.getEntity(), "utf8");
-//                System.out.println("结果：" + html);
-                //解析html
 
                 Document parse = Jsoup.parse(html);
                 parseHtml(parse);//调用解析网页函数
-//                System.out.println("线程创建开始");
-//                Thread thread = new Thread();
-//                thread.sleep(1200000);//间隔sleep10分钟
-//                System.out.println("线程创造结束");
             } catch (Exception e) {
             }
 
         }
 
-    private static void parseHtml(Document parse) throws Exception {
+    private  void parseHtml(Document parse) throws Exception {
 //        int idx = 2;//目前已出成绩科目
         //选择table
         Element table = parse.getElementById("dataList");
@@ -141,7 +136,8 @@ public class GetUserInfo {
         {
             //发送邮件给自己
             System.out.println("这是一个标志");
-            SendMailUtil.sendEmail("1493020035@qq.com", "有成绩更新啦", stringBuilder.toString());
+            SendEmail sendEmail = new SendEmail();
+            email.sendSimpleMail("xx@qq.com","有成绩更新啦",stringBuilder.toString());
             idx = tables.size();
         }
     }

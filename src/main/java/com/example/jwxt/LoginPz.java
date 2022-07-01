@@ -23,8 +23,8 @@ import java.util.*;
 public class LoginPz {
     public static String hello() {
         Map<String,String> param = new HashMap<>();
-        String userAccount = "19408000322";//在“”中填写学号
-        String userPassword = "pj20020318";//在“”中填写密码
+        String userAccount = "";//在“”中填写学号
+        String userPassword = "";//在“”中填写密码
         byte[] userbyte = userAccount.getBytes();//userAccout的byte数组
         byte[] passbyte = userPassword.getBytes();//password的byte数组
         String encoded = Base64.getEncoder().encodeToString(userbyte)+"%%%"+Base64.getEncoder().encodeToString(passbyte);//教务系统的加密方法
