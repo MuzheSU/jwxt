@@ -1,5 +1,5 @@
 # 湖南工业大学成绩更新邮件提醒
-[![](https://img.shields.io/badge/author-wind-blue "作者")](https://github.com/fengxiaop/) [![](https://img.shields.io/badge/%E6%95%99%E5%8A%A1%E7%B3%BB%E7%BB%9F-%E6%88%90%E7%BB%A9%E6%9B%B4%E6%96%B0v1.0-red)](https://github.com/fengxiaop/HUT-JWXT)[![](https://img.shields.io/badge/qq-1493020035-brightgreen"作者qq") ]() 
+[![](https://img.shields.io/badge/author-wind-blue "作者")](https://github.com/fengxiaop/) [![](https://img.shields.io/badge/%E6%95%99%E5%8A%A1%E7%B3%BB%E7%BB%9F%E6%88%90%E7%BB%A9%E6%9B%B4%E6%96%B0-V2.0-red)](https://github.com/fengxiaop/HUT-JWXT)[![](https://img.shields.io/badge/qq-1493020035-brightgreen"作者qq") ]() 
 
 适用于强智科技教务系统所有学校的成绩更新(理论上) 仅供参考
 
